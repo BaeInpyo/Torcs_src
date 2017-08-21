@@ -591,6 +591,7 @@ static void common_drive(int index, tCarElt* car, tSituation *s)
 	torcs_output[DISTANCE] = dist;
 	torcs_output[TRACK_ANGLE] = track_angle;
 	torcs_output[TRACK_WIDTH] = car->_trkPos.seg->width;
+	torcs_output[TRACK_FRICTION] = car->_trkPos.seg->surface->kFriction;
 
 	/*** kswe ***/
 	printf("time: %f, speed: %f, rpm: %f, yaw: %f, dist: %f, track_angle: %f, \n", torcs_output[PASSED_TIME], 3.6*car->_speed_x, car->_enginerpm*10.0, car->_yaw, torcs_output[DISTANCE], track_angle);
