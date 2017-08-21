@@ -1,26 +1,26 @@
 /***************************************************************************
 
-    file                 : human.cpp
-    created              : Sat Mar 18 23:16:38 CET 2000
-    copyright            : (C) 2000 by Eric Espie
-    email                : torcs@free.fr
-    version              : $Id: human.cpp,v 1.45.2.4 2008/11/09 20:14:35 berniw Exp $
+	file				 : human.cpp
+	created				 : Sat Mar 18 23:16:38 CET 2000
+	copyright			 : (C) 2000 by Eric Espie
+	email				 : torcs@free.fr
+	version				 : $Id: human.cpp,v 1.45.2.4 2008/11/09 20:14:35 berniw Exp $
 
  ***************************************************************************/
 
 /***************************************************************************
- *                                                                         *
- *   This program is free software; you can redistribute it and/or modify  *
- *   it under the terms of the GNU General Public License as published by  *
- *   the Free Software Foundation; either version 2 of the License, or     *
- *   (at your option) any later version.                                   *
- *                                                                         *
+ *																		   *
+ *	 This program is free software; you can redistribute it and/or modify  *
+ *	 it under the terms of the GNU General Public License as published by  *
+ *	 the Free Software Foundation; either version 2 of the License, or	   *
+ *	 (at your option) any later version.								   *
+ *																		   *
  ***************************************************************************/
 
-/** @file   
-    		
-    @author	<a href=mailto:torcs@free.fr>Eric Espie</a>
-    @version	$Id: human.cpp,v 1.45.2.4 2008/11/09 20:14:35 berniw Exp $
+/** @file	
+			
+	@author	<a href=mailto:torcs@free.fr>Eric Espie</a>
+	@version	$Id: human.cpp,v 1.45.2.4 2008/11/09 20:14:35 berniw Exp $
 */
 
 
@@ -59,7 +59,7 @@ static void initTrack(int index, tTrack* track, void *carHandle, void **carParmH
 static void drive_mt(int index, tCarElt* car, tSituation *s);
 static void drive_at(int index, tCarElt* car, tSituation *s);
 static void newrace(int index, tCarElt* car, tSituation *s);
-static int  pitcmd(int index, tCarElt* car, tSituation *s);
+static int	pitcmd(int index, tCarElt* car, tSituation *s);
 
 int joyPresent = 0;
 
@@ -102,7 +102,7 @@ static int	firstTime = 0;
 /* should be present in mswindows */
 BOOL WINAPI DllEntryPoint (HINSTANCE hDLL, DWORD dwReason, LPVOID Reserved)
 {
-    return TRUE;
+	return TRUE;
 }
 #endif
 
@@ -177,18 +177,18 @@ InitFuncPt(int index, void *pt)
 
 	itf->rbNewTrack = initTrack;	/* give the robot the track view called */
 	/* for every track change or new race */
-	itf->rbNewRace  = newrace;
+	itf->rbNewRace	= newrace;
 
 	HmReadPrefs(index);
 
 	if (HCtx[idx]->Transmission == 0) {
-		itf->rbDrive    = drive_at;
+		itf->rbDrive	= drive_at;
 	} else {
-		itf->rbDrive    = drive_mt;		/* drive during race */
+		itf->rbDrive	= drive_mt;		/* drive during race */
 	}
 	itf->rbShutdown = shutdown;
-	itf->rbPitCmd   = pitcmd;
-	itf->index      = index;
+	itf->rbPitCmd	= pitcmd;
+	itf->index		= index;
 
 	return 0;
 }
@@ -233,11 +233,11 @@ human(tModInfo *modInfo)
 				break;
 			}
 			strncpy(names[i], driver, MAXNAMELEN);
-			modInfo->name    = names[i];	/* name of the module (short) */
-			modInfo->desc    = strdup("Joystick controlable driver");	/* description of the module (can be long) */
+			modInfo->name	 = names[i];	/* name of the module (short) */
+			modInfo->desc	 = strdup("Joystick controlable driver");	/* description of the module (can be long) */
 			modInfo->fctInit = InitFuncPt;	/* init function */
-			modInfo->gfId    = ROB_IDENT;	/* supported framework version */
-			modInfo->index   = i+1;
+			modInfo->gfId	 = ROB_IDENT;	/* supported framework version */
+			modInfo->index	 = i+1;
 			modInfo++;
 		}
 		// Just release in case we got it.
@@ -254,9 +254,9 @@ human(tModInfo *modInfo)
  *
  * Description
  *	search under drivers/human/tracks/<trackname>/car-<model>-<index>.xml
- *		     drivers/human/car-<model>-<index>.xml
- *		     drivers/human/tracks/<trackname>/car-<model>.xml
- *		     drivers/human/car-<model>.xml
+ *			 drivers/human/car-<model>-<index>.xml
+ *			 drivers/human/tracks/<trackname>/car-<model>.xml
+ *			 drivers/human/car-<model>.xml
  *
  * Parameters
  *
@@ -359,7 +359,7 @@ void newrace(int index, tCarElt* car, tSituation *s)
 			HCtx[idx]->shiftThld[i] = car->_enginerpmRedLine * car->_wheelRadius(2) * 0.85 / car->_gearRatio[i];
 			GfOut("Gear %d: Spd %f\n", i, HCtx[idx]->shiftThld[i] * 3.6);
 		} else {
-	    	HCtx[idx]->shiftThld[i] = 10000.0;
+			HCtx[idx]->shiftThld[i] = 10000.0;
 		}
 	}
 
@@ -456,7 +456,7 @@ updateKeys(void)
 				}
 			}
 		}
-    }
+	}
 }
 
 
@@ -498,13 +498,13 @@ static void common_drive(int index, tCarElt* car, tSituation *s)
 
 	if (firstTime) {
 		if (HCtx[idx]->MouseControlUsed) {
-	    	GfuiMouseShow();
-	    	GfctrlMouseInitCenter();
+			GfuiMouseShow();
+			GfctrlMouseInitCenter();
 		}
 		GfuiKeyEventRegisterCurrent(onKeyAction);
 		GfuiSKeyEventRegisterCurrent(onSKeyAction);
 		firstTime = 0;
-    }
+	}
 
 
 	HCtx[idx]->distToStart = RtGetDistFromStart(car);
@@ -591,6 +591,7 @@ static void common_drive(int index, tCarElt* car, tSituation *s)
 	torcs_output[DISTANCE] = dist;
 	torcs_output[TRACK_ANGLE] = track_angle;
 	torcs_output[TRACK_WIDTH] = car->_trkPos.seg->width;
+
 	/*** kswe ***/
 	printf("time: %f, speed: %f, rpm: %f, yaw: %f, dist: %f, track_angle: %f, \n", torcs_output[PASSED_TIME], 3.6*car->_speed_x, car->_enginerpm*10.0, car->_yaw, torcs_output[DISTANCE], track_angle);
 	/************/
@@ -691,7 +692,7 @@ static void common_drive(int index, tCarElt* car, tSituation *s)
 		case GFCTRL_TYPE_JOY_BUT:
 			if (cmd[CMD_RIGHTSTEER].type == GFCTRL_TYPE_KEYBOARD) {
 				ax0 = keyInfo[cmd[CMD_RIGHTSTEER].val].state;
-			} else  if (cmd[CMD_RIGHTSTEER].type == GFCTRL_TYPE_SKEYBOARD) {
+			} else	if (cmd[CMD_RIGHTSTEER].type == GFCTRL_TYPE_SKEYBOARD) {
 				ax0 = skeyInfo[cmd[CMD_RIGHTSTEER].val].state;
 			} else {
 				ax0 = joyInfo->levelup[cmd[CMD_RIGHTSTEER].val];
@@ -715,8 +716,8 @@ static void common_drive(int index, tCarElt* car, tSituation *s)
 
 	/*** kswe ***/
 	if(HCtx[idx]->ParamLkas < 0.5)
-    	car->_steerCmd = user_input[STEER];
-    /************/
+		car->_steerCmd = user_input[STEER];
+	/************/
 
 	switch (cmd[CMD_BRAKE].type) {
 		case GFCTRL_TYPE_JOY_AXIS:
@@ -846,22 +847,22 @@ static void common_drive(int index, tCarElt* car, tSituation *s)
 			break;
 	}
 
-    /*** kswe ***/
+	/*** kswe ***/
 	if(HCtx[idx]->ParamScc < 0.5)
-    {
-	    car->_accelCmd = user_input[ACCEL];
-	    car->_brakeCmd = user_input[BRAKE];
-    }
-    /************/
+	{
+		car->_accelCmd = user_input[ACCEL];
+		car->_brakeCmd = user_input[BRAKE];
+	}
+	/************/
 
 	if (s->currentTime > 1.0) {
 		// thanks Christos for the following: gradual accel/brake changes for on/off controls.
 		const tdble inc_rate = 0.2f;
 		
 		if (cmd[CMD_BRAKE].type == GFCTRL_TYPE_JOY_BUT ||
-		    cmd[CMD_BRAKE].type == GFCTRL_TYPE_MOUSE_BUT ||
-		    cmd[CMD_BRAKE].type == GFCTRL_TYPE_KEYBOARD ||
-		    cmd[CMD_BRAKE].type == GFCTRL_TYPE_SKEYBOARD)
+			cmd[CMD_BRAKE].type == GFCTRL_TYPE_MOUSE_BUT ||
+			cmd[CMD_BRAKE].type == GFCTRL_TYPE_KEYBOARD ||
+			cmd[CMD_BRAKE].type == GFCTRL_TYPE_SKEYBOARD)
 		{
 			tdble d_brake = car->_brakeCmd - HCtx[idx]->pbrake;
 			if (fabs(d_brake) > inc_rate && car->_brakeCmd > HCtx[idx]->pbrake) {
@@ -926,7 +927,7 @@ static void common_drive(int index, tCarElt* car, tSituation *s)
 
 	if (HCtx[idx]->ParamAsr) 
 	{
-    	tdble trackangle = RtTrackSideTgAngleL(&(car->_trkPos));
+		tdble trackangle = RtTrackSideTgAngleL(&(car->_trkPos));
 		tdble angle = trackangle - car->_yaw;
 		NORM_PI_PI(angle);
 
@@ -959,17 +960,17 @@ static void common_drive(int index, tCarElt* car, tSituation *s)
 		{
 			case D4WD:
 				drivespeed = ((car->_wheelSpinVel(FRNT_RGT) + car->_wheelSpinVel(FRNT_LFT)) *
-				              car->_wheelRadius(FRNT_LFT) +
-				              (car->_wheelSpinVel(REAR_RGT) + car->_wheelSpinVel(REAR_LFT)) *
-				              car->_wheelRadius(REAR_LFT)) / 4.0; 
+							  car->_wheelRadius(FRNT_LFT) +
+							  (car->_wheelSpinVel(REAR_RGT) + car->_wheelSpinVel(REAR_LFT)) *
+							  car->_wheelRadius(REAR_LFT)) / 4.0; 
 				break;
 			case DFWD:
 				drivespeed = (car->_wheelSpinVel(FRNT_RGT) + car->_wheelSpinVel(FRNT_LFT)) *
-				              car->_wheelRadius(FRNT_LFT) / 2.0;
+							  car->_wheelRadius(FRNT_LFT) / 2.0;
 				break;
 			default:
 				drivespeed = (car->_wheelSpinVel(REAR_RGT) + car->_wheelSpinVel(REAR_LFT)) *
-				              car->_wheelRadius(REAR_LFT) / 2.0;
+							  car->_wheelRadius(REAR_LFT) / 2.0;
 				break;
 		}
 
@@ -1131,7 +1132,7 @@ static void drive_at(int index, tCarElt* car, tSituation *s)
 	gear += car->_gearOffset;
 	car->_gearCmd = car->_gear;
 
-    if (!HCtx[idx]->AutoReverse) {
+	if (!HCtx[idx]->AutoReverse) {
 		/* manual shift */
 		if (((cmd[CMD_UP_SHFT].type == GFCTRL_TYPE_JOY_BUT) && joyInfo->edgeup[cmd[CMD_UP_SHFT].val]) ||
 			((cmd[CMD_UP_SHFT].type == GFCTRL_TYPE_KEYBOARD) && keyInfo[cmd[CMD_UP_SHFT].val].edgeUp) ||
@@ -1174,7 +1175,7 @@ static void drive_at(int index, tCarElt* car, tSituation *s)
 				HCtx[idx]->manual = 1;
 			}
 		}
-    }
+	}
 
 	/* auto shift */
 	if (!HCtx[idx]->manual && !HCtx[idx]->AutoReverseEngaged) {
@@ -1188,7 +1189,7 @@ static void drive_at(int index, tCarElt* car, tSituation *s)
 		}
 	}
 
-    if (HCtx[idx]->AutoReverse) {
+	if (HCtx[idx]->AutoReverse) {
 		/* Automatic Reverse Gear Mode */
 		if (!HCtx[idx]->AutoReverseEngaged) {
 			if ((car->_brakeCmd > car->_accelCmd) && (car->_speed_x < 1.0)) {
@@ -1204,10 +1205,10 @@ static void drive_at(int index, tCarElt* car, tSituation *s)
 				car->_gearCmd = CMD_GEAR_R - CMD_GEAR_N;
 			}
 		}
-    }
+	}
 
 	if (HCtx[idx]->autoClutch && car->_clutchCmd == 0.0f)
-	    car->_clutchCmd = getAutoClutch(idx, car->_gear, car->_gearCmd, car);
+		car->_clutchCmd = getAutoClutch(idx, car->_gear, car->_gearCmd, car);
 }
 
 static int pitcmd(int index, tCarElt* car, tSituation *s)
