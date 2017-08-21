@@ -549,7 +549,7 @@ ReOneStep(double deltaTimeIncrement)
 	/*** kswe ***/
 	// active
 	torcs_output[IS_RUNNING] = 1.0;
-	int a = user_input[NUM_DUMMY];
+	int a = user_input[INPUT_SIZE];
 
 	if(torcs_output[CC_TRIGGER] > 0.5 && torcs_output[LKAS_TRIGGER] > 0.5)
 		a = a + 2;
