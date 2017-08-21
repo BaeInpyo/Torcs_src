@@ -1,2 +1,7 @@
 *.o
 *.so
+.depend
+*.a
+*-bin
+*.spec
+gennmtab
