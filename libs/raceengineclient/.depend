@@ -1,0 +1,745 @@
+singleplayer.o: singleplayer.cpp /usr/include/stdc-predef.h \
+ /usr/include/stdlib.h /usr/include/features.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-64.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/stddef.h \
+ /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h \
+ /usr/include/endian.h /usr/include/bits/endian.h \
+ /usr/include/bits/byteswap.h /usr/include/bits/types.h \
+ /usr/include/bits/typesizes.h /usr/include/bits/byteswap-16.h \
+ /usr/include/xlocale.h /usr/include/sys/types.h /usr/include/time.h \
+ /usr/include/sys/select.h /usr/include/bits/select.h \
+ /usr/include/bits/sigset.h /usr/include/bits/time.h \
+ /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h \
+ /usr/include/alloca.h /usr/include/bits/stdlib-float.h \
+ /usr/include/stdio.h /usr/include/libio.h /usr/include/_G_config.h \
+ /usr/include/wchar.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/stdarg.h \
+ /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/tgfclient.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/tgf.h \
+ /usr/include/sys/param.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include-fixed/limits.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include-fixed/syslimits.h \
+ /usr/include/limits.h /usr/include/bits/posix1_lim.h \
+ /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
+ /usr/include/bits/posix2_lim.h /usr/include/bits/xopen_lim.h \
+ /usr/include/signal.h /usr/include/bits/signum.h \
+ /usr/include/bits/siginfo.h /usr/include/bits/sigaction.h \
+ /usr/include/bits/sigcontext.h /usr/include/bits/sigstack.h \
+ /usr/include/sys/ucontext.h /usr/include/bits/sigthread.h \
+ /usr/include/bits/param.h /usr/include/linux/param.h \
+ /usr/include/asm/param.h /usr/include/asm-generic/param.h \
+ /usr/include/assert.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/cstring \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/x86_64-pc-linux-gnu/bits/c++config.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/x86_64-pc-linux-gnu/bits/os_defines.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/x86_64-pc-linux-gnu/bits/cpu_defines.h \
+ /usr/include/string.h /usr/include/math.h \
+ /usr/include/bits/math-vector.h /usr/include/bits/libm-simd-decl-stubs.h \
+ /usr/include/bits/huge_val.h /usr/include/bits/huge_valf.h \
+ /usr/include/bits/huge_vall.h /usr/include/bits/inf.h \
+ /usr/include/bits/nan.h /usr/include/bits/mathdef.h \
+ /usr/include/bits/mathcalls.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/osspec.h \
+ /usr/include/GL/glut.h /usr/include/GL/freeglut_std.h \
+ /usr/include/GL/gl.h /usr/include/GL/glext.h /usr/include/inttypes.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/stdint.h \
+ /usr/include/stdint.h /usr/include/bits/wchar.h /usr/include/GL/glu.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/js.h \
+ /usr/include/plib/ul.h /usr/include/ctype.h /usr/include/unistd.h \
+ /usr/include/bits/posix_opt.h /usr/include/bits/environments.h \
+ /usr/include/bits/confname.h /usr/include/getopt.h /usr/include/dlfcn.h \
+ /usr/include/bits/dlfcn.h /usr/include/fcntl.h /usr/include/bits/fcntl.h \
+ /usr/include/bits/fcntl-linux.h /usr/include/bits/uio.h \
+ /usr/include/bits/stat.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/float.h \
+ /usr/include/errno.h /usr/include/bits/errno.h \
+ /usr/include/linux/errno.h /usr/include/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/sys/ioctl.h /usr/include/bits/ioctls.h \
+ /usr/include/asm/ioctls.h /usr/include/asm-generic/ioctls.h \
+ /usr/include/linux/ioctl.h /usr/include/asm/ioctl.h \
+ /usr/include/asm-generic/ioctl.h /usr/include/bits/ioctl-types.h \
+ /usr/include/sys/ttydefaults.h /usr/include/linux/joystick.h \
+ /usr/include/linux/types.h /usr/include/asm/types.h \
+ /usr/include/asm-generic/types.h /usr/include/asm-generic/int-ll64.h \
+ /usr/include/asm/bitsperlong.h /usr/include/asm-generic/bitsperlong.h \
+ /usr/include/linux/posix_types.h /usr/include/linux/stddef.h \
+ /usr/include/asm/posix_types.h /usr/include/asm/posix_types_64.h \
+ /usr/include/asm-generic/posix_types.h /usr/include/linux/input.h \
+ /usr/include/sys/time.h /usr/include/linux/input-event-codes.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/screen_properties.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/raceman.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/car.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/track.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/tmath/linalg_t.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/tmath/v2_t.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/tmath/v3_t.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/tmath/v4_t.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/tmath/straight2_t.h \
+ /usr/include/plib/sg.h /usr/include/plib/ul.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/graphic.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/simu.h \
+ raceengine.h racemain.h raceinit.h racestate.h
+raceinit.o: raceinit.cpp /usr/include/stdc-predef.h /usr/include/stdlib.h \
+ /usr/include/features.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-64.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/stddef.h \
+ /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h \
+ /usr/include/endian.h /usr/include/bits/endian.h \
+ /usr/include/bits/byteswap.h /usr/include/bits/types.h \
+ /usr/include/bits/typesizes.h /usr/include/bits/byteswap-16.h \
+ /usr/include/xlocale.h /usr/include/sys/types.h /usr/include/time.h \
+ /usr/include/sys/select.h /usr/include/bits/select.h \
+ /usr/include/bits/sigset.h /usr/include/bits/time.h \
+ /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h \
+ /usr/include/alloca.h /usr/include/bits/stdlib-float.h \
+ /usr/include/stdio.h /usr/include/libio.h /usr/include/_G_config.h \
+ /usr/include/wchar.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/stdarg.h \
+ /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/tgfclient.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/tgf.h \
+ /usr/include/sys/param.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include-fixed/limits.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include-fixed/syslimits.h \
+ /usr/include/limits.h /usr/include/bits/posix1_lim.h \
+ /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
+ /usr/include/bits/posix2_lim.h /usr/include/bits/xopen_lim.h \
+ /usr/include/signal.h /usr/include/bits/signum.h \
+ /usr/include/bits/siginfo.h /usr/include/bits/sigaction.h \
+ /usr/include/bits/sigcontext.h /usr/include/bits/sigstack.h \
+ /usr/include/sys/ucontext.h /usr/include/bits/sigthread.h \
+ /usr/include/bits/param.h /usr/include/linux/param.h \
+ /usr/include/asm/param.h /usr/include/asm-generic/param.h \
+ /usr/include/assert.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/cstring \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/x86_64-pc-linux-gnu/bits/c++config.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/x86_64-pc-linux-gnu/bits/os_defines.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/x86_64-pc-linux-gnu/bits/cpu_defines.h \
+ /usr/include/string.h /usr/include/math.h \
+ /usr/include/bits/math-vector.h /usr/include/bits/libm-simd-decl-stubs.h \
+ /usr/include/bits/huge_val.h /usr/include/bits/huge_valf.h \
+ /usr/include/bits/huge_vall.h /usr/include/bits/inf.h \
+ /usr/include/bits/nan.h /usr/include/bits/mathdef.h \
+ /usr/include/bits/mathcalls.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/osspec.h \
+ /usr/include/GL/glut.h /usr/include/GL/freeglut_std.h \
+ /usr/include/GL/gl.h /usr/include/GL/glext.h /usr/include/inttypes.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/stdint.h \
+ /usr/include/stdint.h /usr/include/bits/wchar.h /usr/include/GL/glu.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/js.h \
+ /usr/include/plib/ul.h /usr/include/ctype.h /usr/include/unistd.h \
+ /usr/include/bits/posix_opt.h /usr/include/bits/environments.h \
+ /usr/include/bits/confname.h /usr/include/getopt.h /usr/include/dlfcn.h \
+ /usr/include/bits/dlfcn.h /usr/include/fcntl.h /usr/include/bits/fcntl.h \
+ /usr/include/bits/fcntl-linux.h /usr/include/bits/uio.h \
+ /usr/include/bits/stat.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/float.h \
+ /usr/include/errno.h /usr/include/bits/errno.h \
+ /usr/include/linux/errno.h /usr/include/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/sys/ioctl.h /usr/include/bits/ioctls.h \
+ /usr/include/asm/ioctls.h /usr/include/asm-generic/ioctls.h \
+ /usr/include/linux/ioctl.h /usr/include/asm/ioctl.h \
+ /usr/include/asm-generic/ioctl.h /usr/include/bits/ioctl-types.h \
+ /usr/include/sys/ttydefaults.h /usr/include/linux/joystick.h \
+ /usr/include/linux/types.h /usr/include/asm/types.h \
+ /usr/include/asm-generic/types.h /usr/include/asm-generic/int-ll64.h \
+ /usr/include/asm/bitsperlong.h /usr/include/asm-generic/bitsperlong.h \
+ /usr/include/linux/posix_types.h /usr/include/linux/stddef.h \
+ /usr/include/asm/posix_types.h /usr/include/asm/posix_types_64.h \
+ /usr/include/asm-generic/posix_types.h /usr/include/linux/input.h \
+ /usr/include/sys/time.h /usr/include/linux/input-event-codes.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/screen_properties.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/raceman.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/car.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/track.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/tmath/linalg_t.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/tmath/v2_t.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/tmath/v3_t.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/tmath/v4_t.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/tmath/straight2_t.h \
+ /usr/include/plib/sg.h /usr/include/plib/ul.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/graphic.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/simu.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/robot.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/racescreens.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/robottools.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/portability.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/config.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/string \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/bits/stringfwd.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/bits/memoryfwd.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/bits/char_traits.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/bits/stl_algobase.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/bits/functexcept.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/bits/exception_defines.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/bits/cpp_type_traits.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/ext/type_traits.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/ext/numeric_traits.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/bits/stl_pair.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/bits/move.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/bits/concept_check.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/bits/stl_iterator_base_types.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/bits/stl_iterator_base_funcs.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/debug/debug.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/bits/stl_iterator.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/bits/ptr_traits.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/bits/predefined_ops.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/bits/postypes.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/cwchar \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/bits/allocator.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/x86_64-pc-linux-gnu/bits/c++allocator.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/ext/new_allocator.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/new \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/exception \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/bits/atomic_lockfree_defines.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/bits/localefwd.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/x86_64-pc-linux-gnu/bits/c++locale.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/clocale \
+ /usr/include/locale.h /usr/include/bits/locale.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/iosfwd \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/cctype \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/bits/ostream_insert.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/bits/cxxabi_forced.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/bits/stl_function.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/backward/binders.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/bits/range_access.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/bits/basic_string.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/ext/atomicity.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/x86_64-pc-linux-gnu/bits/gthr.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/x86_64-pc-linux-gnu/bits/gthr-default.h \
+ /usr/include/pthread.h /usr/include/sched.h /usr/include/bits/sched.h \
+ /usr/include/bits/timex.h /usr/include/bits/setjmp.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/x86_64-pc-linux-gnu/bits/atomic_word.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/bits/basic_string.tcc \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/map \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/bits/stl_tree.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/ext/alloc_traits.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/bits/stl_map.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/bits/stl_multimap.h \
+ raceengine.h racemain.h racestate.h racegl.h raceresults.h raceinit.h
+racemain.o: racemain.cpp /usr/include/stdc-predef.h /usr/include/stdlib.h \
+ /usr/include/features.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-64.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/stddef.h \
+ /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h \
+ /usr/include/endian.h /usr/include/bits/endian.h \
+ /usr/include/bits/byteswap.h /usr/include/bits/types.h \
+ /usr/include/bits/typesizes.h /usr/include/bits/byteswap-16.h \
+ /usr/include/xlocale.h /usr/include/sys/types.h /usr/include/time.h \
+ /usr/include/sys/select.h /usr/include/bits/select.h \
+ /usr/include/bits/sigset.h /usr/include/bits/time.h \
+ /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h \
+ /usr/include/alloca.h /usr/include/bits/stdlib-float.h \
+ /usr/include/stdio.h /usr/include/libio.h /usr/include/_G_config.h \
+ /usr/include/wchar.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/stdarg.h \
+ /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/tgfclient.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/tgf.h \
+ /usr/include/sys/param.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include-fixed/limits.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include-fixed/syslimits.h \
+ /usr/include/limits.h /usr/include/bits/posix1_lim.h \
+ /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
+ /usr/include/bits/posix2_lim.h /usr/include/bits/xopen_lim.h \
+ /usr/include/signal.h /usr/include/bits/signum.h \
+ /usr/include/bits/siginfo.h /usr/include/bits/sigaction.h \
+ /usr/include/bits/sigcontext.h /usr/include/bits/sigstack.h \
+ /usr/include/sys/ucontext.h /usr/include/bits/sigthread.h \
+ /usr/include/bits/param.h /usr/include/linux/param.h \
+ /usr/include/asm/param.h /usr/include/asm-generic/param.h \
+ /usr/include/assert.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/cstring \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/x86_64-pc-linux-gnu/bits/c++config.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/x86_64-pc-linux-gnu/bits/os_defines.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/x86_64-pc-linux-gnu/bits/cpu_defines.h \
+ /usr/include/string.h /usr/include/math.h \
+ /usr/include/bits/math-vector.h /usr/include/bits/libm-simd-decl-stubs.h \
+ /usr/include/bits/huge_val.h /usr/include/bits/huge_valf.h \
+ /usr/include/bits/huge_vall.h /usr/include/bits/inf.h \
+ /usr/include/bits/nan.h /usr/include/bits/mathdef.h \
+ /usr/include/bits/mathcalls.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/osspec.h \
+ /usr/include/GL/glut.h /usr/include/GL/freeglut_std.h \
+ /usr/include/GL/gl.h /usr/include/GL/glext.h /usr/include/inttypes.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/stdint.h \
+ /usr/include/stdint.h /usr/include/bits/wchar.h /usr/include/GL/glu.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/js.h \
+ /usr/include/plib/ul.h /usr/include/ctype.h /usr/include/unistd.h \
+ /usr/include/bits/posix_opt.h /usr/include/bits/environments.h \
+ /usr/include/bits/confname.h /usr/include/getopt.h /usr/include/dlfcn.h \
+ /usr/include/bits/dlfcn.h /usr/include/fcntl.h /usr/include/bits/fcntl.h \
+ /usr/include/bits/fcntl-linux.h /usr/include/bits/uio.h \
+ /usr/include/bits/stat.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/float.h \
+ /usr/include/errno.h /usr/include/bits/errno.h \
+ /usr/include/linux/errno.h /usr/include/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/sys/ioctl.h /usr/include/bits/ioctls.h \
+ /usr/include/asm/ioctls.h /usr/include/asm-generic/ioctls.h \
+ /usr/include/linux/ioctl.h /usr/include/asm/ioctl.h \
+ /usr/include/asm-generic/ioctl.h /usr/include/bits/ioctl-types.h \
+ /usr/include/sys/ttydefaults.h /usr/include/linux/joystick.h \
+ /usr/include/linux/types.h /usr/include/asm/types.h \
+ /usr/include/asm-generic/types.h /usr/include/asm-generic/int-ll64.h \
+ /usr/include/asm/bitsperlong.h /usr/include/asm-generic/bitsperlong.h \
+ /usr/include/linux/posix_types.h /usr/include/linux/stddef.h \
+ /usr/include/asm/posix_types.h /usr/include/asm/posix_types_64.h \
+ /usr/include/asm-generic/posix_types.h /usr/include/linux/input.h \
+ /usr/include/sys/time.h /usr/include/linux/input-event-codes.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/screen_properties.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/raceman.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/car.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/track.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/tmath/linalg_t.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/tmath/v2_t.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/tmath/v3_t.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/tmath/v4_t.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/tmath/straight2_t.h \
+ /usr/include/plib/sg.h /usr/include/plib/ul.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/graphic.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/simu.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/robot.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/racescreens.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/exitmenu.h \
+ raceengine.h raceinit.h racegl.h raceresults.h racestate.h racemanmenu.h \
+ racemain.h
+racemanmenu.o: racemanmenu.cpp /usr/include/stdc-predef.h \
+ /usr/include/stdlib.h /usr/include/features.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-64.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/stddef.h \
+ /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h \
+ /usr/include/endian.h /usr/include/bits/endian.h \
+ /usr/include/bits/byteswap.h /usr/include/bits/types.h \
+ /usr/include/bits/typesizes.h /usr/include/bits/byteswap-16.h \
+ /usr/include/xlocale.h /usr/include/sys/types.h /usr/include/time.h \
+ /usr/include/sys/select.h /usr/include/bits/select.h \
+ /usr/include/bits/sigset.h /usr/include/bits/time.h \
+ /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h \
+ /usr/include/alloca.h /usr/include/bits/stdlib-float.h \
+ /usr/include/stdio.h /usr/include/libio.h /usr/include/_G_config.h \
+ /usr/include/wchar.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/stdarg.h \
+ /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/tgfclient.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/tgf.h \
+ /usr/include/sys/param.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include-fixed/limits.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include-fixed/syslimits.h \
+ /usr/include/limits.h /usr/include/bits/posix1_lim.h \
+ /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
+ /usr/include/bits/posix2_lim.h /usr/include/bits/xopen_lim.h \
+ /usr/include/signal.h /usr/include/bits/signum.h \
+ /usr/include/bits/siginfo.h /usr/include/bits/sigaction.h \
+ /usr/include/bits/sigcontext.h /usr/include/bits/sigstack.h \
+ /usr/include/sys/ucontext.h /usr/include/bits/sigthread.h \
+ /usr/include/bits/param.h /usr/include/linux/param.h \
+ /usr/include/asm/param.h /usr/include/asm-generic/param.h \
+ /usr/include/assert.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/cstring \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/x86_64-pc-linux-gnu/bits/c++config.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/x86_64-pc-linux-gnu/bits/os_defines.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/x86_64-pc-linux-gnu/bits/cpu_defines.h \
+ /usr/include/string.h /usr/include/math.h \
+ /usr/include/bits/math-vector.h /usr/include/bits/libm-simd-decl-stubs.h \
+ /usr/include/bits/huge_val.h /usr/include/bits/huge_valf.h \
+ /usr/include/bits/huge_vall.h /usr/include/bits/inf.h \
+ /usr/include/bits/nan.h /usr/include/bits/mathdef.h \
+ /usr/include/bits/mathcalls.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/osspec.h \
+ /usr/include/GL/glut.h /usr/include/GL/freeglut_std.h \
+ /usr/include/GL/gl.h /usr/include/GL/glext.h /usr/include/inttypes.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/stdint.h \
+ /usr/include/stdint.h /usr/include/bits/wchar.h /usr/include/GL/glu.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/js.h \
+ /usr/include/plib/ul.h /usr/include/ctype.h /usr/include/unistd.h \
+ /usr/include/bits/posix_opt.h /usr/include/bits/environments.h \
+ /usr/include/bits/confname.h /usr/include/getopt.h /usr/include/dlfcn.h \
+ /usr/include/bits/dlfcn.h /usr/include/fcntl.h /usr/include/bits/fcntl.h \
+ /usr/include/bits/fcntl-linux.h /usr/include/bits/uio.h \
+ /usr/include/bits/stat.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/float.h \
+ /usr/include/errno.h /usr/include/bits/errno.h \
+ /usr/include/linux/errno.h /usr/include/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/sys/ioctl.h /usr/include/bits/ioctls.h \
+ /usr/include/asm/ioctls.h /usr/include/asm-generic/ioctls.h \
+ /usr/include/linux/ioctl.h /usr/include/asm/ioctl.h \
+ /usr/include/asm-generic/ioctl.h /usr/include/bits/ioctl-types.h \
+ /usr/include/sys/ttydefaults.h /usr/include/linux/joystick.h \
+ /usr/include/linux/types.h /usr/include/asm/types.h \
+ /usr/include/asm-generic/types.h /usr/include/asm-generic/int-ll64.h \
+ /usr/include/asm/bitsperlong.h /usr/include/asm-generic/bitsperlong.h \
+ /usr/include/linux/posix_types.h /usr/include/linux/stddef.h \
+ /usr/include/asm/posix_types.h /usr/include/asm/posix_types_64.h \
+ /usr/include/asm-generic/posix_types.h /usr/include/linux/input.h \
+ /usr/include/sys/time.h /usr/include/linux/input-event-codes.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/screen_properties.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/raceman.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/car.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/track.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/tmath/linalg_t.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/tmath/v2_t.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/tmath/v3_t.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/tmath/v4_t.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/tmath/straight2_t.h \
+ /usr/include/plib/sg.h /usr/include/plib/ul.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/graphic.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/simu.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/racescreens.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/driverconfig.h \
+ raceengine.h racemain.h raceinit.h racestate.h racemanmenu.h
+racestate.o: racestate.cpp /usr/include/stdc-predef.h \
+ /usr/include/stdlib.h /usr/include/features.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-64.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/stddef.h \
+ /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h \
+ /usr/include/endian.h /usr/include/bits/endian.h \
+ /usr/include/bits/byteswap.h /usr/include/bits/types.h \
+ /usr/include/bits/typesizes.h /usr/include/bits/byteswap-16.h \
+ /usr/include/xlocale.h /usr/include/sys/types.h /usr/include/time.h \
+ /usr/include/sys/select.h /usr/include/bits/select.h \
+ /usr/include/bits/sigset.h /usr/include/bits/time.h \
+ /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h \
+ /usr/include/alloca.h /usr/include/bits/stdlib-float.h \
+ /usr/include/stdio.h /usr/include/libio.h /usr/include/_G_config.h \
+ /usr/include/wchar.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/stdarg.h \
+ /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/tgfclient.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/tgf.h \
+ /usr/include/sys/param.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include-fixed/limits.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include-fixed/syslimits.h \
+ /usr/include/limits.h /usr/include/bits/posix1_lim.h \
+ /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
+ /usr/include/bits/posix2_lim.h /usr/include/bits/xopen_lim.h \
+ /usr/include/signal.h /usr/include/bits/signum.h \
+ /usr/include/bits/siginfo.h /usr/include/bits/sigaction.h \
+ /usr/include/bits/sigcontext.h /usr/include/bits/sigstack.h \
+ /usr/include/sys/ucontext.h /usr/include/bits/sigthread.h \
+ /usr/include/bits/param.h /usr/include/linux/param.h \
+ /usr/include/asm/param.h /usr/include/asm-generic/param.h \
+ /usr/include/assert.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/cstring \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/x86_64-pc-linux-gnu/bits/c++config.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/x86_64-pc-linux-gnu/bits/os_defines.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/x86_64-pc-linux-gnu/bits/cpu_defines.h \
+ /usr/include/string.h /usr/include/math.h \
+ /usr/include/bits/math-vector.h /usr/include/bits/libm-simd-decl-stubs.h \
+ /usr/include/bits/huge_val.h /usr/include/bits/huge_valf.h \
+ /usr/include/bits/huge_vall.h /usr/include/bits/inf.h \
+ /usr/include/bits/nan.h /usr/include/bits/mathdef.h \
+ /usr/include/bits/mathcalls.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/osspec.h \
+ /usr/include/GL/glut.h /usr/include/GL/freeglut_std.h \
+ /usr/include/GL/gl.h /usr/include/GL/glext.h /usr/include/inttypes.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/stdint.h \
+ /usr/include/stdint.h /usr/include/bits/wchar.h /usr/include/GL/glu.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/js.h \
+ /usr/include/plib/ul.h /usr/include/ctype.h /usr/include/unistd.h \
+ /usr/include/bits/posix_opt.h /usr/include/bits/environments.h \
+ /usr/include/bits/confname.h /usr/include/getopt.h /usr/include/dlfcn.h \
+ /usr/include/bits/dlfcn.h /usr/include/fcntl.h /usr/include/bits/fcntl.h \
+ /usr/include/bits/fcntl-linux.h /usr/include/bits/uio.h \
+ /usr/include/bits/stat.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/float.h \
+ /usr/include/errno.h /usr/include/bits/errno.h \
+ /usr/include/linux/errno.h /usr/include/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/sys/ioctl.h /usr/include/bits/ioctls.h \
+ /usr/include/asm/ioctls.h /usr/include/asm-generic/ioctls.h \
+ /usr/include/linux/ioctl.h /usr/include/asm/ioctl.h \
+ /usr/include/asm-generic/ioctl.h /usr/include/bits/ioctl-types.h \
+ /usr/include/sys/ttydefaults.h /usr/include/linux/joystick.h \
+ /usr/include/linux/types.h /usr/include/asm/types.h \
+ /usr/include/asm-generic/types.h /usr/include/asm-generic/int-ll64.h \
+ /usr/include/asm/bitsperlong.h /usr/include/asm-generic/bitsperlong.h \
+ /usr/include/linux/posix_types.h /usr/include/linux/stddef.h \
+ /usr/include/asm/posix_types.h /usr/include/asm/posix_types_64.h \
+ /usr/include/asm-generic/posix_types.h /usr/include/linux/input.h \
+ /usr/include/sys/time.h /usr/include/linux/input-event-codes.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/screen_properties.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/raceman.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/car.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/track.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/tmath/linalg_t.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/tmath/v2_t.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/tmath/v3_t.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/tmath/v4_t.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/tmath/straight2_t.h \
+ /usr/include/plib/sg.h /usr/include/plib/ul.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/graphic.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/simu.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/racescreens.h \
+ racemain.h raceinit.h raceengine.h racegl.h raceresults.h racemanmenu.h \
+ racestate.h ../../data_list.h
+racegl.o: racegl.cpp /usr/include/stdc-predef.h /usr/include/stdlib.h \
+ /usr/include/features.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-64.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/stddef.h \
+ /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h \
+ /usr/include/endian.h /usr/include/bits/endian.h \
+ /usr/include/bits/byteswap.h /usr/include/bits/types.h \
+ /usr/include/bits/typesizes.h /usr/include/bits/byteswap-16.h \
+ /usr/include/xlocale.h /usr/include/sys/types.h /usr/include/time.h \
+ /usr/include/sys/select.h /usr/include/bits/select.h \
+ /usr/include/bits/sigset.h /usr/include/bits/time.h \
+ /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h \
+ /usr/include/alloca.h /usr/include/bits/stdlib-float.h \
+ /usr/include/stdio.h /usr/include/libio.h /usr/include/_G_config.h \
+ /usr/include/wchar.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/stdarg.h \
+ /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/tgfclient.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/tgf.h \
+ /usr/include/sys/param.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include-fixed/limits.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include-fixed/syslimits.h \
+ /usr/include/limits.h /usr/include/bits/posix1_lim.h \
+ /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
+ /usr/include/bits/posix2_lim.h /usr/include/bits/xopen_lim.h \
+ /usr/include/signal.h /usr/include/bits/signum.h \
+ /usr/include/bits/siginfo.h /usr/include/bits/sigaction.h \
+ /usr/include/bits/sigcontext.h /usr/include/bits/sigstack.h \
+ /usr/include/sys/ucontext.h /usr/include/bits/sigthread.h \
+ /usr/include/bits/param.h /usr/include/linux/param.h \
+ /usr/include/asm/param.h /usr/include/asm-generic/param.h \
+ /usr/include/assert.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/cstring \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/x86_64-pc-linux-gnu/bits/c++config.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/x86_64-pc-linux-gnu/bits/os_defines.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/x86_64-pc-linux-gnu/bits/cpu_defines.h \
+ /usr/include/string.h /usr/include/math.h \
+ /usr/include/bits/math-vector.h /usr/include/bits/libm-simd-decl-stubs.h \
+ /usr/include/bits/huge_val.h /usr/include/bits/huge_valf.h \
+ /usr/include/bits/huge_vall.h /usr/include/bits/inf.h \
+ /usr/include/bits/nan.h /usr/include/bits/mathdef.h \
+ /usr/include/bits/mathcalls.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/osspec.h \
+ /usr/include/GL/glut.h /usr/include/GL/freeglut_std.h \
+ /usr/include/GL/gl.h /usr/include/GL/glext.h /usr/include/inttypes.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/stdint.h \
+ /usr/include/stdint.h /usr/include/bits/wchar.h /usr/include/GL/glu.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/js.h \
+ /usr/include/plib/ul.h /usr/include/ctype.h /usr/include/unistd.h \
+ /usr/include/bits/posix_opt.h /usr/include/bits/environments.h \
+ /usr/include/bits/confname.h /usr/include/getopt.h /usr/include/dlfcn.h \
+ /usr/include/bits/dlfcn.h /usr/include/fcntl.h /usr/include/bits/fcntl.h \
+ /usr/include/bits/fcntl-linux.h /usr/include/bits/uio.h \
+ /usr/include/bits/stat.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/float.h \
+ /usr/include/errno.h /usr/include/bits/errno.h \
+ /usr/include/linux/errno.h /usr/include/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/sys/ioctl.h /usr/include/bits/ioctls.h \
+ /usr/include/asm/ioctls.h /usr/include/asm-generic/ioctls.h \
+ /usr/include/linux/ioctl.h /usr/include/asm/ioctl.h \
+ /usr/include/asm-generic/ioctl.h /usr/include/bits/ioctl-types.h \
+ /usr/include/sys/ttydefaults.h /usr/include/linux/joystick.h \
+ /usr/include/linux/types.h /usr/include/asm/types.h \
+ /usr/include/asm-generic/types.h /usr/include/asm-generic/int-ll64.h \
+ /usr/include/asm/bitsperlong.h /usr/include/asm-generic/bitsperlong.h \
+ /usr/include/linux/posix_types.h /usr/include/linux/stddef.h \
+ /usr/include/asm/posix_types.h /usr/include/asm/posix_types_64.h \
+ /usr/include/asm-generic/posix_types.h /usr/include/linux/input.h \
+ /usr/include/sys/time.h /usr/include/linux/input-event-codes.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/screen_properties.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/raceman.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/car.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/track.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/tmath/linalg_t.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/tmath/v2_t.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/tmath/v3_t.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/tmath/v4_t.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/tmath/straight2_t.h \
+ /usr/include/plib/sg.h /usr/include/plib/ul.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/graphic.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/simu.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/robot.h \
+ racemain.h raceinit.h racestate.h raceengine.h racegl.h
+raceengine.o: raceengine.cpp /usr/include/stdc-predef.h \
+ /usr/include/stdlib.h /usr/include/features.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-64.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/stddef.h \
+ /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h \
+ /usr/include/endian.h /usr/include/bits/endian.h \
+ /usr/include/bits/byteswap.h /usr/include/bits/types.h \
+ /usr/include/bits/typesizes.h /usr/include/bits/byteswap-16.h \
+ /usr/include/xlocale.h /usr/include/sys/types.h /usr/include/time.h \
+ /usr/include/sys/select.h /usr/include/bits/select.h \
+ /usr/include/bits/sigset.h /usr/include/bits/time.h \
+ /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h \
+ /usr/include/alloca.h /usr/include/bits/stdlib-float.h \
+ /usr/include/stdio.h /usr/include/libio.h /usr/include/_G_config.h \
+ /usr/include/wchar.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/stdarg.h \
+ /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/tgfclient.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/tgf.h \
+ /usr/include/sys/param.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include-fixed/limits.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include-fixed/syslimits.h \
+ /usr/include/limits.h /usr/include/bits/posix1_lim.h \
+ /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
+ /usr/include/bits/posix2_lim.h /usr/include/bits/xopen_lim.h \
+ /usr/include/signal.h /usr/include/bits/signum.h \
+ /usr/include/bits/siginfo.h /usr/include/bits/sigaction.h \
+ /usr/include/bits/sigcontext.h /usr/include/bits/sigstack.h \
+ /usr/include/sys/ucontext.h /usr/include/bits/sigthread.h \
+ /usr/include/bits/param.h /usr/include/linux/param.h \
+ /usr/include/asm/param.h /usr/include/asm-generic/param.h \
+ /usr/include/assert.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/cstring \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/x86_64-pc-linux-gnu/bits/c++config.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/x86_64-pc-linux-gnu/bits/os_defines.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/x86_64-pc-linux-gnu/bits/cpu_defines.h \
+ /usr/include/string.h /usr/include/math.h \
+ /usr/include/bits/math-vector.h /usr/include/bits/libm-simd-decl-stubs.h \
+ /usr/include/bits/huge_val.h /usr/include/bits/huge_valf.h \
+ /usr/include/bits/huge_vall.h /usr/include/bits/inf.h \
+ /usr/include/bits/nan.h /usr/include/bits/mathdef.h \
+ /usr/include/bits/mathcalls.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/osspec.h \
+ /usr/include/GL/glut.h /usr/include/GL/freeglut_std.h \
+ /usr/include/GL/gl.h /usr/include/GL/glext.h /usr/include/inttypes.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/stdint.h \
+ /usr/include/stdint.h /usr/include/bits/wchar.h /usr/include/GL/glu.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/js.h \
+ /usr/include/plib/ul.h /usr/include/ctype.h /usr/include/unistd.h \
+ /usr/include/bits/posix_opt.h /usr/include/bits/environments.h \
+ /usr/include/bits/confname.h /usr/include/getopt.h /usr/include/dlfcn.h \
+ /usr/include/bits/dlfcn.h /usr/include/fcntl.h /usr/include/bits/fcntl.h \
+ /usr/include/bits/fcntl-linux.h /usr/include/bits/uio.h \
+ /usr/include/bits/stat.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/float.h \
+ /usr/include/errno.h /usr/include/bits/errno.h \
+ /usr/include/linux/errno.h /usr/include/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/sys/ioctl.h /usr/include/bits/ioctls.h \
+ /usr/include/asm/ioctls.h /usr/include/asm-generic/ioctls.h \
+ /usr/include/linux/ioctl.h /usr/include/asm/ioctl.h \
+ /usr/include/asm-generic/ioctl.h /usr/include/bits/ioctl-types.h \
+ /usr/include/sys/ttydefaults.h /usr/include/linux/joystick.h \
+ /usr/include/linux/types.h /usr/include/asm/types.h \
+ /usr/include/asm-generic/types.h /usr/include/asm-generic/int-ll64.h \
+ /usr/include/asm/bitsperlong.h /usr/include/asm-generic/bitsperlong.h \
+ /usr/include/linux/posix_types.h /usr/include/linux/stddef.h \
+ /usr/include/asm/posix_types.h /usr/include/asm/posix_types_64.h \
+ /usr/include/asm-generic/posix_types.h /usr/include/linux/input.h \
+ /usr/include/sys/time.h /usr/include/linux/input-event-codes.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/screen_properties.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/robot.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/raceman.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/car.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/track.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/tmath/linalg_t.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/tmath/v2_t.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/tmath/v3_t.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/tmath/v4_t.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/tmath/straight2_t.h \
+ /usr/include/plib/sg.h /usr/include/plib/ul.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/graphic.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/simu.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/racescreens.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/robottools.h \
+ racemain.h racegl.h raceinit.h raceresults.h raceengine.h \
+ ../../data_list.h
+raceresults.o: raceresults.cpp /usr/include/stdc-predef.h \
+ /usr/include/stdlib.h /usr/include/features.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-64.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/stddef.h \
+ /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h \
+ /usr/include/endian.h /usr/include/bits/endian.h \
+ /usr/include/bits/byteswap.h /usr/include/bits/types.h \
+ /usr/include/bits/typesizes.h /usr/include/bits/byteswap-16.h \
+ /usr/include/xlocale.h /usr/include/sys/types.h /usr/include/time.h \
+ /usr/include/sys/select.h /usr/include/bits/select.h \
+ /usr/include/bits/sigset.h /usr/include/bits/time.h \
+ /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h \
+ /usr/include/alloca.h /usr/include/bits/stdlib-float.h \
+ /usr/include/stdio.h /usr/include/libio.h /usr/include/_G_config.h \
+ /usr/include/wchar.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/stdarg.h \
+ /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+ /usr/include/bits/timex.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/tgfclient.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/tgf.h \
+ /usr/include/sys/param.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include-fixed/limits.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include-fixed/syslimits.h \
+ /usr/include/limits.h /usr/include/bits/posix1_lim.h \
+ /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
+ /usr/include/bits/posix2_lim.h /usr/include/bits/xopen_lim.h \
+ /usr/include/signal.h /usr/include/bits/signum.h \
+ /usr/include/bits/siginfo.h /usr/include/bits/sigaction.h \
+ /usr/include/bits/sigcontext.h /usr/include/bits/sigstack.h \
+ /usr/include/sys/ucontext.h /usr/include/bits/sigthread.h \
+ /usr/include/bits/param.h /usr/include/linux/param.h \
+ /usr/include/asm/param.h /usr/include/asm-generic/param.h \
+ /usr/include/assert.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/cstring \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/x86_64-pc-linux-gnu/bits/c++config.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/x86_64-pc-linux-gnu/bits/os_defines.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/g++-v4/x86_64-pc-linux-gnu/bits/cpu_defines.h \
+ /usr/include/string.h /usr/include/math.h \
+ /usr/include/bits/math-vector.h /usr/include/bits/libm-simd-decl-stubs.h \
+ /usr/include/bits/huge_val.h /usr/include/bits/huge_valf.h \
+ /usr/include/bits/huge_vall.h /usr/include/bits/inf.h \
+ /usr/include/bits/nan.h /usr/include/bits/mathdef.h \
+ /usr/include/bits/mathcalls.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/osspec.h \
+ /usr/include/GL/glut.h /usr/include/GL/freeglut_std.h \
+ /usr/include/GL/gl.h /usr/include/GL/glext.h /usr/include/inttypes.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/stdint.h \
+ /usr/include/stdint.h /usr/include/bits/wchar.h /usr/include/GL/glu.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/js.h \
+ /usr/include/plib/ul.h /usr/include/ctype.h /usr/include/unistd.h \
+ /usr/include/bits/posix_opt.h /usr/include/bits/environments.h \
+ /usr/include/bits/confname.h /usr/include/getopt.h /usr/include/dlfcn.h \
+ /usr/include/bits/dlfcn.h /usr/include/fcntl.h /usr/include/bits/fcntl.h \
+ /usr/include/bits/fcntl-linux.h /usr/include/bits/uio.h \
+ /usr/include/bits/stat.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include/float.h \
+ /usr/include/errno.h /usr/include/bits/errno.h \
+ /usr/include/linux/errno.h /usr/include/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/sys/ioctl.h /usr/include/bits/ioctls.h \
+ /usr/include/asm/ioctls.h /usr/include/asm-generic/ioctls.h \
+ /usr/include/linux/ioctl.h /usr/include/asm/ioctl.h \
+ /usr/include/asm-generic/ioctl.h /usr/include/bits/ioctl-types.h \
+ /usr/include/sys/ttydefaults.h /usr/include/linux/joystick.h \
+ /usr/include/linux/types.h /usr/include/asm/types.h \
+ /usr/include/asm-generic/types.h /usr/include/asm-generic/int-ll64.h \
+ /usr/include/asm/bitsperlong.h /usr/include/asm-generic/bitsperlong.h \
+ /usr/include/linux/posix_types.h /usr/include/linux/stddef.h \
+ /usr/include/asm/posix_types.h /usr/include/asm/posix_types_64.h \
+ /usr/include/asm-generic/posix_types.h /usr/include/linux/input.h \
+ /usr/include/sys/time.h /usr/include/linux/input-event-codes.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/screen_properties.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/robot.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/raceman.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/car.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/track.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/tmath/linalg_t.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/tmath/v2_t.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/tmath/v3_t.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/tmath/v4_t.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/tmath/straight2_t.h \
+ /usr/include/plib/sg.h /usr/include/plib/ul.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/graphic.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/simu.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/racescreens.h \
+ /home/inpyo/Documents/2017.1.Spring/RealTimeEmbeddedSystem/Project/Term_project/torcs/export/include/robottools.h \
+ racemain.h racegl.h raceinit.h raceengine.h raceresults.h
