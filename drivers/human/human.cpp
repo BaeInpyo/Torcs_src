@@ -476,6 +476,50 @@ onSKeyAction(int key, int modifier, int state)
 	return 0;
 }
 
+/* New implementation */
+static float getDistToSegEnd(tCarElt* car) {
+	tTrackSeg *seg = car->_trkPos.seg;
+	if (seg->type == TR_STR) {
+		return seg->length - car->_trkPos.toStart;
+	} else {
+		return (seg->arc - car->_trkPos.toStart)*seg->radius;
+	}
+}
+
+#define LOOKAHEAD_CONST 5.0
+#define LOOKAHEAD_FACTOR 0.63
+/* New implementation */
+static v2d getTargetPoint(tCarElt* car) {
+	tTrackSeg *seg = car->_trkPos.seg;
+	float lookahead = LOOKAHEAD_CONST + car->_speed_x*LOOKAHEAD_FACTOR;
+	float length = getDistToSegEnd(car);
+
+	while (length < lookahead) {
+		seg = seg->next;
+		length += seg->length;
+	}
+
+	length = lookahead - length + seg->length;
+	v2d s;
+	s.x = (seg->vertex[TR_SL].x + seg->vertex[TR_SR].x)/2.0;
+	s.y = (seg->vertex[TR_SL].y + seg->vertex[TR_SR].y)/2.0;
+
+	if (seg->type == TR_STR) {
+		v2d d;
+		d.x = (seg->vertex[TR_EL].x - seg->vertex[TR_SL].x)/seg->length;
+		d.y = (seg->vertex[TR_EL].y - seg->vertex[TR_SL].y)/seg->length;
+		return s + d*length;
+	} else {
+		v2d c;
+		c.x = seg->center.x;
+		c.y = seg->center.y;
+		float arc = length/seg->radius;
+		float arcsign = (seg->type == TR_RGT) ? -1 : 1;
+		arc *= arcsign;
+		return s.rotate(c, arc);
+	}
+}
+
 static void common_drive(int index, tCarElt* car, tSituation *s)
 {
 	/*** kswe ***/
@@ -589,8 +633,14 @@ static void common_drive(int index, tCarElt* car, tSituation *s)
 	torcs_output[RPM] = car->_enginerpm*10.0;
 	torcs_output[YAW] = car->_yaw;
 	torcs_output[DISTANCE] = dist;
-	torcs_output[TRACK_ANGLE] = track_angle;
+//	torcs_output[TRACK_ANGLE] = track_angle;
 	torcs_output[TRACK_WIDTH] = car->_trkPos.seg->width;
+
+	v2d target = getTargetPoint(car);
+    track_angle = atan2(target.y - car->_pos_Y, target.x - car->_pos_X);
+
+	torcs_output[TRACK_ANGLE] = track_angle;
+	torcs_output[STEER_LOCK] = car->_steerLock;
 	torcs_output[TRACK_FRICTION] = car->_trkPos.seg->surface->kFriction;
 
 	/*** kswe ***/
