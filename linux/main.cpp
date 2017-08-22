@@ -40,13 +40,13 @@
 // for shared mem (input)
 int shmid_input;
 float *user_input;
-int size_user_input = INPUT_SIZE;
+int size_user_input = 10;
 void *shared_memory_input = (void *)0;
 
 // for shared mem (output)
 int shmid_output;
 float *torcs_output;
-int size_torcs_output = OUTPUT_SIZE;
+int size_torcs_output = 200;
 void *shared_memory_output = (void *)0;
 
 void *init_shared_mem(int *id, int key, int data_size, int num_of_data, void *mem);
