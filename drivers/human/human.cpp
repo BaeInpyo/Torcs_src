@@ -486,8 +486,8 @@ static float getDistToSegEnd(tCarElt* car) {
 	}
 }
 
-#define LOOKAHEAD_CONST 5.0
-#define LOOKAHEAD_FACTOR 0.63
+#define LOOKAHEAD_CONST 1.0
+#define LOOKAHEAD_FACTOR 0.85
 /* New implementation */
 static v2d getTargetPoint(tCarElt* car) {
 	tTrackSeg *seg = car->_trkPos.seg;
