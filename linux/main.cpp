@@ -33,9 +33,11 @@
 #include <signal.h>
 
 #include "../data_list.h"
+#include "../actions.h"
 
 #define SHMEM 1230
 #define SHMEM2 4320
+#define SHMEM3 1040
 
 // for shared mem (input)
 int shmid_input;
@@ -48,6 +50,11 @@ int shmid_output;
 float *torcs_output;
 int size_torcs_output = OUTPUT_SIZE;
 void *shared_memory_output = (void *)0;
+
+// for shared mem (action)
+int shmid_action;
+unsigned int* action;
+void* shared_memory_action = (void *)0;
 
 void *init_shared_mem(int *id, int key, int data_size, int num_of_data, void *mem);
 int free_shared_mem(void *data, int id);
@@ -137,10 +144,12 @@ main(int argc, char *argv[])
 	signal(SIGINT, signal_handler);
 	user_input = (float*)init_shared_mem(&shmid_input, SHMEM, sizeof(float), size_user_input, shared_memory_input);		// shm start (input)
 	torcs_output = (float*)init_shared_mem(&shmid_output, SHMEM2, sizeof(float), size_torcs_output, shared_memory_output);
+	action = (unsigned int*)init_shared_mem(&shmid_action, SHMEM3, sizeof(unsigned int), 1, shared_memory_action);
 	for(int i = 0; i < size_user_input; i++)
 		user_input[i] = 0.0;
 	for(int i = 0; i < size_torcs_output; i++)
 		torcs_output[i] = 0.0;
+	*action = ACT_PLAY;
     /************/
     
     LinuxSpecInit();		/* init specific linux functions */
@@ -189,6 +198,7 @@ void do_exit()
     	int re;
 	re = free_shared_mem(user_input, shmid_input);		// shm end (input)
 	re = free_shared_mem(torcs_output, shmid_output);	// shm end (output)
+	re = free_shared_mem(action, shmid_action);			// shm end (action)
     	printf("free shared memory with %d\n", re);
     exit(0);
 }

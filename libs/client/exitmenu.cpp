@@ -25,9 +25,10 @@
 
 /*** kswe ***/
 extern int free_shared_mem(void *data, int id);
-extern double *user_input;
-extern double *torcs_output;
-extern int shmid_input, shmid_output;
+extern float *user_input;
+extern float *torcs_output;
+extern unsigned int *action;
+extern int shmid_input, shmid_output, shmid_action;
 
 /************/
 
@@ -43,6 +44,7 @@ endofprog(void * /* dummy */)
     	int re;
 	re = free_shared_mem(user_input, shmid_input);		// shm end (input)
 	re = free_shared_mem(torcs_output, shmid_output);	// shm end (output)
+	re = free_shared_mem(action, shmid_action);			// shm end (action)
     	printf("free shared memory with %d\n", re);
     /************/
     exit(0);

@@ -39,9 +39,15 @@
 #include "raceengine.h"
 
 /*** kswe ***/
+// colors for stdout info
+#define C_RED	"\x1B[31m"
+#define C_NONE	"\033[0m"
+
 #include "../../data_list.h"
+#include "../../actions.h"
 extern float *torcs_output;
 extern float *user_input;
+extern unsigned int *action;
 double pre_time = 0.0;
 /************/
 
@@ -547,7 +553,27 @@ ReOneStep(double deltaTimeIncrement)
 	}
 
 	/*** kswe ***/
-	// active
+	// read action and stop race if ACT_PAUSE, ignore otherwise
+	if(*action == ACT_PAUSE)
+	{
+				// TODO Add message to the screen
+		printf("%s\nPausing race: re-computing schedule\n\n%s", C_RED, C_NONE);
+		fflush(stdout);
+		ReStop();
+		// Stay at paused state until action is ACT_PLAY
+		while(1)
+		{
+			usleep(1000);
+			if(*action == ACT_PLAY)
+				break;
+		}
+		// TODO Add message to the screen
+		printf("%sRe-starting race: schedule re-computed\n\n%s", C_RED, C_NONE);
+		fflush(stdout);
+		ReStart();
+	}
+
+    // active
 	torcs_output[IS_RUNNING] = 1.0;
 	int a = user_input[INPUT_SIZE];
 

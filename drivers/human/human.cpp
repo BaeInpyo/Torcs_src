@@ -49,6 +49,7 @@
 /*** kswe ***/
 #include "linalg.h"
 #include "../../data_list.h"
+#include "../../actions.h"
 /************/
 
 #define DRWD 0
@@ -525,6 +526,7 @@ static void common_drive(int index, tCarElt* car, tSituation *s)
 	/*** kswe ***/
 	extern float *user_input;
 	extern float *torcs_output;
+	extern unsigned int *action;
 	/************/
 
 	tdble slip;
@@ -644,7 +646,7 @@ static void common_drive(int index, tCarElt* car, tSituation *s)
 	torcs_output[TRACK_FRICTION] = car->_trkPos.seg->surface->kFriction;
 
 	/*** kswe ***/
-	printf("time: %f, speed: %f, rpm: %f, yaw: %f, dist: %f, track_angle: %f, \n", torcs_output[PASSED_TIME], 3.6*car->_speed_x, car->_enginerpm*10.0, car->_yaw, torcs_output[DISTANCE], track_angle);
+	printf("action: 0x%02x, time: %f, speed: %f, rpm: %f, yaw: %f, dist: %f, track_angle: %f, \n", *action, torcs_output[PASSED_TIME], 3.6*car->_speed_x, car->_enginerpm*10.0, car->_yaw, torcs_output[DISTANCE], track_angle);
 	/************/
 
 	sprintf(car->_msgCmd[0], "%s %s %s %s", (HCtx[idx]->ParamAbs ? "ABS" : ""), (HCtx[idx]->ParamAsr ? "ASR" : ""), (HCtx[idx]->ParamScc ? "SC" : ""), (HCtx[idx]->ParamLkas ? "LK" : ""));
