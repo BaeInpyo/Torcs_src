@@ -521,33 +521,53 @@ static v2d getTargetPoint(tCarElt* car) {
 	}
 }
 
+static int isDiffShapeSegs(tTrackSeg *src, tTrackSeg *dst) {
+	int res = 1;
+	int s_type = src->type;
+	int d_type = dst->type;
+	float s_rad = src->radius;
+	float d_rad = dst->radius;
+
+	if (s_type == d_type && s_rad == d_rad) {
+		res = 0;
+	} 
+	return res;
+}
+
+static float calLength(tTrackSeg *seg) {
+	float length;
+	if (seg->type == TR_STR) {
+		length = seg->length;
+	} else {
+		length = seg->arc*seg->radius;
+	}
+	return length;
+}
+
 static float getDistUntilNextCurve(float time, tCarElt* car) {
 	tTrackSeg *seg = car->_trkPos.seg;
 	tTrackSeg *next_seg = seg->next;
 
-	if (seg->type == TR_STR) {
-		float length = getDistToSegEnd(car);
-		printf("time :%f", time);
-		while (next_seg->type == TR_STR) {
-			length += next_seg->length;
-			next_seg = next_seg->next;
-		}
-		printf(", %.2f\n", length);
-		fflush(stdout);
-		return length;
+	float length = getDistToSegEnd(car);
+	printf("time :%f", time);
+	while (!isDiffShapeSegs(seg, next_seg)) {
+		length += calLength(next_seg);
+		next_seg = next_seg->next;
 	}
-
-	return -1;
+	printf(", %.2f\n", length);
+	fflush(stdout);
+	return length;
 }
 
 static float getRadiusOfNextCurve(tCarElt* car) {
 	tTrackSeg *seg = car->_trkPos.seg;
+	tTrackSeg *next_seg = seg->next;
 
-	while (seg->type == TR_STR) {
-		seg = seg->next;
+	while (!isDiffShapeSegs(seg, next_seg)) {
+		next_seg = next_seg->next;
 	}
 
-	return seg->radius;
+	return next_seg->radius;
 }
 
 static void common_drive(int index, tCarElt* car, tSituation *s)
@@ -677,12 +697,12 @@ static void common_drive(int index, tCarElt* car, tSituation *s)
 	torcs_output[STEER_LOCK] = car->_steerLock;
 
 	torcs_output[NEXT_CURVE_DIST] = getDistUntilNextCurve(torcs_output[PASSED_TIME], car);
+	torcs_output[CURR_CURVE_RADIUS] = car->_trkPos.seg->radius;
 	torcs_output[NEXT_CURVE_RADIUS] = getRadiusOfNextCurve(car);
-	torcs_output[TRACK_TYPE] = (float)(car->_trkPos.seg->type);
 	torcs_output[TRACK_FRICTION] = car->_trkPos.seg->surface->kFriction;
 
 	/*** kswe ***/
-	printf("action: 0x%02x, time: %f, speed: %f, rpm: %f, yaw: %f, dist: %f, track_angle: %f, \n", *action, torcs_output[PASSED_TIME], 3.6*car->_speed_x, car->_enginerpm*10.0, car->_yaw, torcs_output[DISTANCE], track_angle);
+	//printf("action: 0x%02x, time: %f, speed: %f, rpm: %f, yaw: %f, dist: %f, track_angle: %f, \n", *action, torcs_output[PASSED_TIME], 3.6*car->_speed_x, car->_enginerpm*10.0, car->_yaw, torcs_output[DISTANCE], track_angle);
 	/************/
 
 	sprintf(car->_msgCmd[0], "%s %s %s %s", (HCtx[idx]->ParamAbs ? "ABS" : ""), (HCtx[idx]->ParamAsr ? "ASR" : ""), (HCtx[idx]->ParamScc ? "SC" : ""), (HCtx[idx]->ParamLkas ? "LK" : ""));
