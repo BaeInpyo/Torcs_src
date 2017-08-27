@@ -487,7 +487,7 @@ static float getDistToSegEnd(tCarElt* car) {
 	}
 }
 
-#define LOOKAHEAD_CONST 1.0
+#define LOOKAHEAD_CONST 2.0
 #define LOOKAHEAD_FACTOR 0.85
 /* New implementation */
 static v2d getTargetPoint(tCarElt* car) {
@@ -519,6 +519,35 @@ static v2d getTargetPoint(tCarElt* car) {
 		arc *= arcsign;
 		return s.rotate(c, arc);
 	}
+}
+
+static float getDistUntilNextCurve(float time, tCarElt* car) {
+	tTrackSeg *seg = car->_trkPos.seg;
+	tTrackSeg *next_seg = seg->next;
+
+	if (seg->type == TR_STR) {
+		float length = getDistToSegEnd(car);
+		printf("time :%f", time);
+		while (next_seg->type == TR_STR) {
+			length += next_seg->length;
+			next_seg = next_seg->next;
+		}
+		printf(", %.2f\n", length);
+		fflush(stdout);
+		return length;
+	}
+
+	return -1;
+}
+
+static float getRadiusOfNextCurve(tCarElt* car) {
+	tTrackSeg *seg = car->_trkPos.seg;
+
+	while (seg->type == TR_STR) {
+		seg = seg->next;
+	}
+
+	return seg->radius;
 }
 
 static void common_drive(int index, tCarElt* car, tSituation *s)
@@ -622,6 +651,7 @@ static void common_drive(int index, tCarElt* car, tSituation *s)
 	float angle = 0.0;
 	float dist = 0.0;
 	float track_angle = 0.0;
+	float track_angle2 = 0.0;
 
 	// LKAS
 	{
@@ -639,10 +669,16 @@ static void common_drive(int index, tCarElt* car, tSituation *s)
 	torcs_output[TRACK_WIDTH] = car->_trkPos.seg->width;
 
 	v2d target = getTargetPoint(car);
-    track_angle = atan2(target.y - car->_pos_Y, target.x - car->_pos_X);
+    track_angle2 = atan2(target.y - car->_pos_Y, target.x - car->_pos_X);
+	
+	//getCurrAndNextSegType(car);
 
-	torcs_output[TRACK_ANGLE] = track_angle;
+	torcs_output[TRACK_ANGLE] = track_angle2;
 	torcs_output[STEER_LOCK] = car->_steerLock;
+
+	torcs_output[NEXT_CURVE_DIST] = getDistUntilNextCurve(torcs_output[PASSED_TIME], car);
+	torcs_output[NEXT_CURVE_RADIUS] = getRadiusOfNextCurve(car);
+	torcs_output[TRACK_TYPE] = (float)(car->_trkPos.seg->type);
 	torcs_output[TRACK_FRICTION] = car->_trkPos.seg->surface->kFriction;
 
 	/*** kswe ***/
