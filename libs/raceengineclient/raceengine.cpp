@@ -556,7 +556,7 @@ ReOneStep(double deltaTimeIncrement)
 	// read action and stop race if ACT_PAUSE, ignore otherwise
 	if(*action == ACT_PAUSE)
 	{
-				// TODO Add message to the screen
+		ReRaceMsgSet("Pausing: Re-compute Schedule", 3.0);
 		printf("%s\nPausing race: re-computing schedule\n\n%s", C_RED, C_NONE);
 		fflush(stdout);
 		ReStop();
@@ -567,7 +567,7 @@ ReOneStep(double deltaTimeIncrement)
 			if(*action == ACT_PLAY)
 				break;
 		}
-		// TODO Add message to the screen
+		ReRaceMsgSet("Resuming: Schedule re-computed", 3.0);
 		printf("%sRe-starting race: schedule re-computed\n\n%s", C_RED, C_NONE);
 		fflush(stdout);
 		ReStart();
